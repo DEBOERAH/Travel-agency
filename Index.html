@@ -1,72 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just Travel</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
-    
+
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg  custom-bg  ">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <a class="navbar-brand text-color" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-color" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-color" href="#"> About</a>
+                        </li>
+                        <li class="nav-item"></li>
+                        <a class="nav-link text-color" href="#">services</a>
+                        </li>
+                        <li class="nav-item"></li>
+                        <a class="nav-link text-color" href="#">contact</a>
+                        </li>
+
+
                     </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
-          </nav>
-        
+        </nav>
+
     </header>
-    <main><H1 class="text-warning">Just Travel Agency</H1>
+    <main>
+        <section>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img height="500"
+                            src="data:image/jpeg;base64,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"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img height="500" src="https://arasbaran.org/en/mi_news/show/1394/06/Big/684-92.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img height="500"
+                            src="https://images.timbu.com/contents-490b8ac774bd4f5bbbf12cd69f690a78/3e09ff25-faf2-4c2d-9357-a8d714078ee0.png"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <H1 class="text-warning just-travel">Just Travel Agency</H1>
+        <section>
+            <!-- about -->
+            <div class="row featurette p-5  services-bg">
+                <div class="pricing-header p-3 pb-md-4 mx-auto text-center ">
+                    <h1 class="display-4 fw-normal text-body-emphasis ">About us</h1>
+                    <p class="fs-5 text-body-secondary">At <b>just-travel</b>, we offer a wide range of services to make
+                        your travel dreams a reality. <br>
+                        Welcome to <b>just-travel</b>, where your dream adventures become reality! Founded with a
+                        passion for exploration and a commitment to exceptional service, we are dedicated to crafting
+                        personalized travel experiences that cater to every wanderlust-filled heart.
+
+                        With a wealth of firsthand knowledge, we are here to guide you in discovering the perfect
+                        itinerary tailored to your unique preferences and budget.
+
+                        we believe that travel is more than just a destination—it’s about the memories you create and
+                        the stories you bring back home. Whether you’re seeking a tranquil beach getaway, we are
+                        committed to making your travel dreams come true.
+                        Happy travels! ✈️🌍
+                    </p>
+                </div>
+
+                <div class="col-md-7 p-15">
+                    <h2 class="featurette-heading fw-normal lh-1">Just Travel <span class="text-body-secondary">It’ll
+                            blow your mind.</span></h2>
+                    <p class="lead">At <b> just-travel</b> , we're passionate about crafting unforgettable travel
+                        experiences that bring people closer to the world's most breathtaking destinations. With years
+                        of expertise and a team of dedicated travel enthusiasts, we're committed to delivering
+                        personalized service, expert knowledge, and unparalleled value.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://images.unsplash.com/photo-1529074963764-98f45c47344b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWVyb3BsYW5lfGVufDB8fDB8fHww "
+                        alt=" Areoplabe" width="500px">
+
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img " aria-label="Placeholder: 500x500 "
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title> Placeholder</title>
+                        <rect width="100%" height="100%" fill="var(--bs-secondary-bg) "></rect><text x="50%" y="50%"
+                            fill="var(--bs-secondary-color)" dy=".3em  ">Hello</text>
+                    </svg> -->
+
+                </div>
+                <div class="col-md-7"></div>
+                <h2 class="featurette-heading fw-normal lh-1">Just Travel <span class="text-body-secondary">It’ll
+                        blow your mind.</span></h2>
+                <p class="lead">At <b> just-travel</b>
+
+                    We specialize in custom tours of Ireland but are always expanding and enhancing our wide range of
+                    offers, as well as adding new and exciting tours of Britain, Finland, Iceland, Italy, and
+                    Switzerland.
+
+                    Crystal Travel was founded in 1985 by Jim & Teresa Kelly and since that humble beginning it has
+                    grown into a trusted resource that has helped tens of thousands of people better enjoy their travel.
+                </p>
+            </div>
+
+            </div>
+
+            <div class="row featurette p-5  services-bg">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Just Travel <span class="text-body-secondary">It’ll
+                            blow your mind.</span></h2>
+                    <p class="lead">At <b> just-travel</b> , we're passionate about crafting unforgettable travel
+                        experiences that bring people closer to the world's most breathtaking destinations. With years
+                        of expertise and a team of dedicated travel enthusiasts, we're committed to delivering
+                        personalized service, expert knowledge, and unparalleled value.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://www.shutterstock.com/image-photo/plane-flying-over-mountain-peaks-600nw-2436593833.jpg"
+                        alt=" Areoplabe" width="500px">
+
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img " aria-label="Placeholder: 500x500 "
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title> Placeholder</title>
+                        <rect width="100%" height="100%" fill="var(--bs-secondary-bg) "></rect><text x="50%" y="50%"
+                            fill="var(--bs-secondary-color)" dy=".3em  ">Hello</text>
+                    </svg> -->
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section class="bg-serv">
+            <!-- service -->
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center ">
+                <h1 class="display-4 fw-normal text-body-emphasis ">Services</h1>
+                <p class="fs-5 text-body-secondary">At <b>just-travel</b>, we offer a wide range of services to make
+                    your travel dreams a reality.
+                    Our Services
+At [Your Travel Agency Name], we believe that travel is not just about reaching a destination; it's about creating unforgettable experiences. Our dedicated team of travel experts is here to assist you in planning every detail of your journey. Explore our wide range of services designed to cater to every traveler's needs:
+                </p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col padding-services">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Economy</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="https://www.vacanzarentals.com/wp-content/uploads/2020/10/vacanza-rentals_miami-beach-boardwalk.jpg"
+                                alt="" width="400px">
+
+                            <h1 class="card-title pricing-card-title">$30<small
+                                    class="text-body-secondary fw-light">/mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>5% off full payment</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col padding-services">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Business</h4>
+                        </div>
+                        <div class="card-body ">
+                            <img src="https://thumbs.dreamstime.com/z/vacation-travel-flight-airplane-tourism-plane-trip-planning-world-tour-d-text-luggage-accessories-leisure-holiday-concept-278868495.jpg"
+                                alt="" width="320px">
+                            <h1 class="card-title pricing-card-title">$50<small
+                                    class="text-body-secondary fw-light">/Beach </small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>10% off full payment</li>
+                                <li>10 GB of storage</li>
+                                <li>Priority email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col padding-services ">
+                    <div class="card mb-4 rounded-3 shadow-sm ">
+                        <div class="card-header py-3  ">
+                            <h4 class="my-0 fw-normal">First-class</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="https://www.insidehook.com/wp-content/uploads/2021/03/Makers-Air-1.jpg?w=1500&resize=1500%2C1000"
+                                alt="" width="400px">
+                            <h1 class="card-title pricing-card-title">$90<small
+                                    class="text-body-secondary fw-light">/Vacation</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30% off full payment</li>
+                                <li>1 tag along</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col padding-services">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Economy</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="https://www.shutterstock.com/image-photo/passenger-airplane-landscape-white-flying-260nw-721267990.jpg"
+                                alt="" width="400px">
+
+                            <h1 class="card-title pricing-card-title">$150<small
+                                    class="text-body-secondary fw-light">/Across</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col padding-services">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Business</h4>
+                        </div>
+                        <div class="card-body ">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ta86ar8Bva3It06CrdjL0nMwLMSiCZeayw&s"
+                                alt="" width="320px">
+                            <h1 class="card-title pricing-card-title">$300<small
+                                    class="text-body-secondary fw-light">/Business</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>20 users included</li>
+                                <li>10 GB of storage</li>
+                                <li>Priority email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col padding-services ">
+                    <div class="card mb-4 rounded-3 shadow-sm ">
+                        <div class="card-header py-3  ">
+                            <h4 class="my-0 fw-normal">First-class</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPHtILfMm3JZmGOXAeRycfsY3_51-Hq4rVIg&s"
+                                alt="" width="320px">
+                            <h1 class="card-title pricing-card-title">$500<small
+                                    class="text-body-secondary fw-light">/Around the world</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+        <section class="services-bg contact-pad">
+
+            <!-- contact us -->
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center ">
+                <h1 class="display-4 fw-normal text-body-emphasis ">Contact us</h1>
+                <p class="fs-5 text-body-secondary">At <b>just-travel</b>, we offer a wide range of services to make
+                    your travel dreams a reality.
+                </p>
+
+                <div class="cards">
+
+                    <div class="card" style="width: 18rem; ">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fa-solid fa-location-dot" style="color: #165cd4;"></i>Address</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary"> 75c Ahmadu belloway railway compound Ebute metta lagos</h6>
+                            
+                           
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body  text-center ">
+                            <h5 class="card-title"> <i class="fa-solid fa-phone" style="color: #2e5fb2;"></i>Phone Number</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">09093834855</h6>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"> <i class="fa-solid fa-envelopes-bulk" style="color: #2d6fe1;"></i>Email</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">eniolaofuani@gmail</h6>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
+                </div>
+              
+                
+                
+               
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </form>
+        </section>
+
     </main>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 my-4 border-top" >
+    <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 my-4 border-top footer-bg">
         <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
-    
-        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+
+        <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
         </a>
-    
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+
+        <ul class="nav col-md-4 justify-content-end ">
+            <li class="nav-item "><a href="#" class="nav-link px-2 text-body-secondary ">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
         </ul>
-      </footer>
-    
-    
+    </footer>
 
 
 
@@ -81,6 +408,11 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,0 +1,39 @@
+.custom-bg {
+    background-color: #27647c;
+    
+}
+.text-color {
+    color: white !important;
+}
+
+.footer-bg {
+    background-color:#27647c;
+}
+
+.services-bg {
+    background-color: #C4E8E8;
+}
+.just-travel {
+    background-color: #619FD6;
+}
+.padding-services{
+    padding-top: 50px;
+}
+
+.bg-serv{
+    background-color: #62b1b1;
+}
+.body{
+    background-color: #fff !important;
+}
+.contact-pad{
+    padding: 70PX;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.text{
+    padding: 30px;
+}
